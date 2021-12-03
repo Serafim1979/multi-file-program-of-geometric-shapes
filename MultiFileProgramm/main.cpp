@@ -25,12 +25,6 @@ int main()
     ptrShape[5] = new Sphere(distribution(generator));
 
 
-    std::cout << "---------------------------------------------" << std::endl;
-    for(int i = 0; i < size_array; i++)
-    {
-        ptrShape[i]->show_info();
-    }
-
     std::cout << "====================================================" << std::endl;
     int n;
     std::cout << "Enter size: " << std::endl;
@@ -74,18 +68,13 @@ int main()
     std::cout << "Max area: " << val_max << " ";
     ptr_custom_array[ind]->show_info();
 
-    std::cout << "====================================================" << std::endl;
-    for(int i = 0; i < index.size(); i++)
-    {
-        std::cout << index[i] << std::endl;
-    }
 
     std::cout << "====================================================" << std::endl;
     for(int i = 0; i < index.size(); i++)
     {
+        std::cout << "index: " << index[i] << ", ";
         ptr_custom_array[index[i]]->show_info();
     }
-
 
 
 
@@ -94,5 +83,8 @@ int main()
         delete ptrShape[i];
     }
     delete [] ptrShape;
+
+
+
     return 0;
 }
