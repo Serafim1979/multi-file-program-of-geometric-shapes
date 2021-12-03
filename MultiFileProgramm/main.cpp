@@ -27,6 +27,13 @@ int main()
     ptrShape[4] = new Cube(distribution(generator));
     ptrShape[5] = new Sphere(distribution(generator));
 
+    // Demonstration of user input (console)
+    Circle c1;
+    std::cin >> c1;
+    c1.show_info();
+
+
+
 
     std::cout << "====================================================" << std::endl;
     int n;
@@ -96,7 +103,9 @@ int main()
         }
     }
     else
+    {
         std::cout << "Failed";
+    }
 
     out.close();
 

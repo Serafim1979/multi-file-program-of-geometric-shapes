@@ -17,6 +17,7 @@ public:
     virtual void show_info()const = 0;
     virtual double get_area()const = 0;
     friend std::ostream& operator << (std::ostream&, Shape *&);
+    friend std::istream& operator >> (std::istream&, Shape &);
 };
 ////////////////////////////////////////////////////////////////////////////////
 class Circle : public Shape
@@ -24,10 +25,13 @@ class Circle : public Shape
 private:
     double radius;
 public:
+    Circle();
     Circle(double, std::string name = "Circle", std::string type = "2D");
+    void set_name(std::string);
     double get_area()const;
     double get_perimeter()const;
     void show_info()const;
+    friend std::istream& operator >> (std::istream&, Circle &);
 };
 ////////////////////////////////////////////////////////////////////////////////
 class Square : public Shape

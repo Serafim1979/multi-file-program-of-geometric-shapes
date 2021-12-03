@@ -20,9 +20,14 @@ void Shape::show_info()const
 }
 
 //------Start of class implementation Circle--------
+Circle::Circle() : Shape(name, type){}
 Circle::Circle(double radius, std::string name, std::string type) : Shape(name, type)
 {
     this->radius = radius;
+}
+void Circle::set_name(std::string name)
+{
+    this->name = name;
 }
 double Circle::get_area()const {return 3.14 * radius * radius;}
 double Circle::get_perimeter()const {return 2 * 3.14 * radius;}
@@ -35,6 +40,16 @@ std::ostream& operator << (std::ostream& out, Circle*& crcl)
 {
     out << crcl->get_name() << " " << crcl->get_type() << " " << crcl->get_area() << " " << crcl->get_perimeter();
     return out;
+}
+std::istream& operator >> (std::istream& in, Circle &crcl)
+{
+    std::cout << "Input name: ";
+    in >> crcl.name;
+    std::cout << "Input type: ";
+    in >> crcl.type;
+    std::cout << "Input radius: ";
+    in >> crcl.radius;
+    return in;
 }
 
 ////------Start of class implementation Square--------

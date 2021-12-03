@@ -28,6 +28,76 @@ name: Rectangle type: 2D area: 35.7966
 name: Triangle  type: 2D area: 19.709
 name: Cube      type: 3D area: 393.314
 name: Rectangle type: 2D area: 35.7966
+name: Cube      type: 3D area: 393.314
+name: Cube      type: 3D area: 393.314
+name: Sphere    type: 3D area: 34.8989
+name: Circle    type: 2D area: 178.336
+name: Cube      type: 3D area: 393.314
+name: Cube      type: 3D area: 393.314
+name: Sphere    type: 3D area: 34.8989
+name: Triangle  type: 2D area: 19.709
+name: Cube      type: 3D area: 393.314
+name: Circle    type: 2D area: 178.336
+name: Circle    type: 2D area: 178.336
+name: Rectangle type: 2D area: 35.7966
+name: Sphere    type: 3D area: 34.8989
+name: Triangle  type: 2D area: 19.709
+name: Circle    type: 2D area: 178.336
+name: Square    type: 2D area: 85.3416
+name: Triangle  type: 2D area: 19.709
+name: Circle    type: 2D area: 178.336
+name: Circle    type: 2D area: 178.336
+name: Circle    type: 2D area: 178.336
+name: Rectangle type: 2D area: 35.7966
+name: Rectangle type: 2D area: 35.7966
+name: Sphere    type: 3D area: 34.8989
+name: Circle    type: 2D area: 178.336
+name: Sphere    type: 3D area: 34.8989
+name: Square    type: 2D area: 85.3416
+name: Triangle  type: 2D area: 19.709
+name: Circle    type: 2D area: 178.336
+name: Rectangle type: 2D area: 35.7966
+name: Triangle  type: 2D area: 19.709
+name: Rectangle type: 2D area: 35.7966
+name: Triangle  type: 2D area: 19.709
+name: Cube      type: 3D area: 393.314
+name: Circle    type: 2D area: 178.336
+name: Cube      type: 3D area: 393.314
+name: Sphere    type: 3D area: 34.8989
+name: Sphere    type: 3D area: 34.8989
+name: Cube      type: 3D area: 393.314
+name: Square    type: 2D area: 85.3416
+name: Circle    type: 2D area: 178.336
+name: Sphere    type: 3D area: 34.8989
+name: Circle    type: 2D area: 178.336
+name: Sphere    type: 3D area: 34.8989
+name: Circle    type: 2D area: 178.336
+name: Sphere    type: 3D area: 34.8989
+name: Circle    type: 2D area: 178.336
+name: Triangle  type: 2D area: 19.709
+name: Rectangle type: 2D area: 35.7966
+name: Rectangle type: 2D area: 35.7966
+name: Cube      type: 3D area: 393.314
+name: Sphere    type: 3D area: 34.8989
+name: Triangle  type: 2D area: 19.709
+name: Rectangle type: 2D area: 35.7966
+name: Triangle  type: 2D area: 19.709
+name: Triangle  type: 2D area: 19.709
+name: Triangle  type: 2D area: 19.709
+name: Rectangle type: 2D area: 35.7966
+name: Square    type: 2D area: 85.3416
+name: Cube      type: 3D area: 393.314
+name: Triangle  type: 2D area: 19.709
+name: Triangle  type: 2D area: 19.709
+name: Circle    type: 2D area: 178.336
+name: Square    type: 2D area: 85.3416
+name: Rectangle type: 2D area: 35.7966
+name: Sphere    type: 3D area: 34.8989
+name: Square    type: 2D area: 85.3416
+name: Circle    type: 2D area: 178.336
+name: Rectangle type: 2D area: 35.7966
+name: Sphere    type: 3D area: 34.8989
+name: Square    type: 2D area: 85.3416
 
 ******************************************************
 Figures with the maximum area.
@@ -36,3 +106,13 @@ index: 5, Cube 3D 393.314
 index: 13, Cube 3D 393.314
 index: 23, Cube 3D 393.314
 index: 28, Cube 3D 393.314
+index: 30, Cube 3D 393.314
+index: 31, Cube 3D 393.314
+index: 34, Cube 3D 393.314
+index: 35, Cube 3D 393.314
+index: 38, Cube 3D 393.314
+index: 62, Cube 3D 393.314
+index: 64, Cube 3D 393.314
+index: 67, Cube 3D 393.314
+index: 79, Cube 3D 393.314
+index: 88, Cube 3D 393.314
