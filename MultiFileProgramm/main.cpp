@@ -2,12 +2,15 @@
 #include<fstream>
 #include <random>
 #include <vector>
+#include <iomanip>
 #include <ctime>
 #include"Shapes.h"
 
 
 int main()
 {
+    const std::string file_name = "data_test.txt";
+
     std::random_device random_device;
     std::mt19937 generator(random_device());
     std::uniform_real_distribution<> distribution(1., 10.);
@@ -70,21 +73,32 @@ int main()
 
 
     std::cout << "====================================================" << std::endl;
-    for(int i = 0; i < index.size(); i++)
+    for(int i = 0; i < (int)index.size(); i++)
     {
         std::cout << "index: " << index[i] << ", ";
         ptr_custom_array[index[i]]->show_info();
     }
 
 
+    std::ofstream out(file_name);
 
-    for(int i = 0; i < size_array; i++)
+    if (out.is_open())
     {
-        delete ptrShape[i];
+        for(int i = 0; i < n; i++)
+        {
+            out << std::left <<"name: " << std::setw(9) << ptr_custom_array[i]->get_name() << " type: " << ptr_custom_array[i]->get_type() << " area: " <<  ptr_custom_array[i]->get_area() << std::endl;
+        }
+        out << std::endl << "******************************************************" << std::endl;
+        out << "Figures with the maximum area." << std::endl;
+        for(int i = 0; i < (int)index.size(); i++)
+        {
+            out << "index: " << index[i] << ", " << ptr_custom_array[index[i]]->get_name() << " " << ptr_custom_array[index[i]]->get_type() << " " << ptr_custom_array[index[i]]->get_area() << std::endl;
+        }
     }
-    delete [] ptrShape;
+    else
+        std::cout << "Failed";
 
-
+    out.close();
 
     return 0;
 }
