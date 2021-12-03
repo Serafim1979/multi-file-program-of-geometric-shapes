@@ -16,11 +16,11 @@ std::string Shape::get_type()const
 }
 void Shape::show_info()const
 {
-    std::cout << name << " type: " << type << ", area: " << get_area();
+    std::cout << "name: " << name << ", type: " << type << ", area: " << get_area();
 }
 
 //------Start of class implementation Circle--------
-Circle::Circle(std::string name, double radius , std::string type) : Shape(name, type)
+Circle::Circle(double radius, std::string name, std::string type) : Shape(name, type)
 {
     this->radius = radius;
 }
@@ -33,12 +33,12 @@ void Circle::show_info()const
 }
 std::ostream& operator << (std::ostream& out, Circle*& crcl)
 {
-    out << crcl->get_name() << " " << crcl->get_type();
+    out << crcl->get_name() << " " << crcl->get_type() << " " << crcl->get_area() << " " << crcl->get_perimeter();
     return out;
 }
 
 ////------Start of class implementation Square--------
-Square::Square(std::string name, double side, std::string type) : Shape(name, type)
+Square::Square(double side, std::string name, std::string type) : Shape(name, type)
 {
     this->side = side;;
 }
@@ -51,7 +51,7 @@ void Square::show_info()const
 }
 
 ////------Start of class implementation Rectangle--------
-Rectangle::Rectangle(std::string name, double side_a, double side_b, std::string type) : Shape(name, type)
+Rectangle::Rectangle(double side_a, double side_b, std::string name, std::string type) : Shape(name, type)
 {
     this->side_a = side_a;
     this->side_b = side_b;
@@ -65,7 +65,7 @@ void Rectangle::show_info()const
 }
 
 ////------Start of class implementation Triangle--------
-Triangle::Triangle(std::string name, double side_a, double side_b, double side_c, std::string type) : Shape(name, type)
+Triangle::Triangle(double side_a, double side_b, double side_c, std::string name, std::string type) : Shape(name, type)
 {
     this->side_a = side_a;
     this->side_b = side_b;
@@ -84,7 +84,7 @@ void Triangle::show_info()const
 }
 
 ////------Start of class implementation Cube--------
-Cube::Cube(std::string name, double length, std::string type) : Shape(name, type)
+Cube::Cube(double length, std::string name, std::string type) : Shape(name, type)
 {
     this->length = length;
 }
@@ -98,7 +98,7 @@ void Cube::show_info()const
 }
 
 ////------Start of class implementation Sphere--------
-Sphere::Sphere(std::string name, double radius, std::string type) : Shape(name, type)
+Sphere::Sphere(double radius, std::string name, std::string type) : Shape(name, type)
 {
     this->radius = radius;
 }
