@@ -1,6 +1,7 @@
 #include<iostream>
 #include<fstream>
 #include <random>
+#include <vector>
 #include <ctime>
 #include"Shapes.h"
 
@@ -40,13 +41,49 @@ int main()
     for(int i = 0; i < n; i++)
     {
         ptr_custom_array[i] = ptrShape[distribution2(generator2)];
-        int x = distribution2(generator2);
-        std::cout << x << std::endl;
     }
 
     for(int i = 0; i < n; i++)
     {
         ptr_custom_array[i]->show_info();
+    }
+
+//////////////////////////////-----FIND MAXIMUM-----///////////////////////////////////////////////
+
+    double val_max = ptr_custom_array[0]->get_area();
+    int ind = 0;
+    std::vector<int>index;
+    for(int i = 0; i < n - 1; i++)
+    {
+        if(val_max > ptr_custom_array[0]->get_area())
+        {
+            val_max = ptr_custom_array[i]->get_area();
+            ind = i;
+            index.push_back(ind);
+        }
+    }
+
+    for(int j = 0; j < n; j++)
+    {
+        if(ptr_custom_array[ind]== ptr_custom_array[j])
+        {
+            index.push_back(j);
+        }
+    }
+
+    std::cout << "Max area: " << val_max << " ";
+    ptr_custom_array[ind]->show_info();
+
+    std::cout << "====================================================" << std::endl;
+    for(int i = 0; i < index.size(); i++)
+    {
+        std::cout << index[i] << std::endl;
+    }
+
+    std::cout << "====================================================" << std::endl;
+    for(int i = 0; i < index.size(); i++)
+    {
+        ptr_custom_array[index[i]]->show_info();
     }
 
 
