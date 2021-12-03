@@ -29,7 +29,7 @@ int main()
     std::uniform_real_distribution<> distribution(1., 10.);
 
     std::mt19937 generator2(random_device());
-    std::uniform_int_distribution<>distribution2(0, 6);
+    std::uniform_int_distribution<>distribution2(0, 5);
 
     int size_array = 6;
     Shape* ptrShape[size_array];
@@ -53,9 +53,12 @@ int main()
     std::cin >> n;
 
     Shape* ptr_custom_array[n];
+
     for(int i = 0; i < n; i++)
     {
         ptr_custom_array[i] = ptrShape[distribution2(generator2)];
+        int x = distribution2(generator2);
+        std::cout << x << std::endl;
     }
 
     for(int i = 0; i < n; i++)
