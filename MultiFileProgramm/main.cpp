@@ -4,23 +4,6 @@
 #include <ctime>
 #include"Shapes.h"
 
-const int max_number = 100;
-int generate_date(std::string file_name)
-{
-    const int number_of_names = 6;
-    std::string names[number_of_names] = {"Circle", "Square", "Rectangle", "Triangle", "Cube", "Sphere"};
-    std::string types[] = {"2D", "3D"};
-    int number_of_people = rand() % (max_number + 1);
-
-    std::ofstream out(file_name);
-
-    for(int i = 0; i < number_of_people; i++)
-    {
-        int type = rand() % 2;
-        out << types[type] << " " << names[rand() % number_of_names] << " ";
-    }
-
-}
 
 int main()
 {
