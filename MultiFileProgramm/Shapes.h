@@ -43,6 +43,7 @@ public:
     double get_area()const;
     double get_perimeter()const;
     void show_info()const;
+    friend std::istream& operator >> (std::istream&, Square &);
 };
 ////////////////////////////////////////////////////////////////////////////////
 class Rectangle : public Shape
@@ -54,6 +55,7 @@ public:
     double get_area()const;
     double get_perimeter()const;
     void show_info()const;
+    friend std::istream& operator >> (std::istream&, Rectangle &);
 };
 ////////////////////////////////////////////////////////////////////////////////
 class Triangle : public Shape
@@ -65,6 +67,7 @@ public:
     double get_area()const;
     double get_perimeter()const;
     void show_info()const;
+    friend std::istream& operator >> (std::istream&, Triangle &);
 };
 ////////////////////////////////////////////////////////////////////////////////
 class Cube : public Shape
@@ -77,6 +80,7 @@ public:
     double get_volume()const;
     double get_perimeter()const;
     void show_info()const;
+    friend std::istream& operator >> (std::istream&, Cube &);
 };
 ////////////////////////////////////////////////////////////////////////////////
 class Sphere : public Shape
@@ -88,6 +92,7 @@ public:
     double get_area()const;
     double get_volume()const;
     void show_info()const;
+    friend std::istream& operator >> (std::istream&, Sphere &);
 };
 
 
