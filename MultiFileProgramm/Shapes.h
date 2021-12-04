@@ -39,6 +39,7 @@ class Square : public Shape
 private:
     double side;
 public:
+    Square();
     Square(double, std::string name = "Square", std::string type = "2D");
     double get_area()const;
     double get_perimeter()const;
@@ -51,6 +52,7 @@ class Rectangle : public Shape
 private:
     double side_a, side_b;
 public:
+    Rectangle();
     Rectangle(double, double, std::string name = "Rectangle", std::string type = "2D");
     double get_area()const;
     double get_perimeter()const;
@@ -63,6 +65,7 @@ class Triangle : public Shape
 private:
     double side_a, side_b, side_c;
 public:
+    Triangle();
     Triangle(double, double, double, std::string name = "Triangle", std::string type = "2D");
     double get_area()const;
     double get_perimeter()const;
@@ -75,6 +78,7 @@ class Cube : public Shape
 private:
     double length;
 public:
+    Cube();
     Cube(double, std::string name = "Cube", std::string type = "3D");
     double get_area()const;
     double get_volume()const;
@@ -88,13 +92,12 @@ class Sphere : public Shape
 private:
     double radius;
 public:
+    Sphere();
     Sphere(double, std::string name = "Sphere", std::string type = "3D");
     double get_area()const;
     double get_volume()const;
     void show_info()const;
     friend std::istream& operator >> (std::istream&, Sphere &);
 };
-
-
 
 #endif // SHAPES_H

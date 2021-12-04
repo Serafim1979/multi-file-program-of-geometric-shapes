@@ -53,6 +53,7 @@ std::istream& operator >> (std::istream& in, Circle &crcl)
 }
 
 ////------Start of class implementation Square--------
+Square::Square() : Shape(name, type){}
 Square::Square(double side, std::string name, std::string type) : Shape(name, type)
 {
     this->side = side;;
@@ -81,6 +82,7 @@ std::istream& operator >> (std::istream& in, Square &sqr)
 }
 
 ////------Start of class implementation Rectangle--------
+Rectangle::Rectangle() : Shape(name, type){}
 Rectangle::Rectangle(double side_a, double side_b, std::string name, std::string type) : Shape(name, type)
 {
     this->side_a = side_a;
@@ -112,6 +114,7 @@ std::istream& operator >> (std::istream& in, Rectangle &rect)
 }
 
 ////------Start of class implementation Triangle--------
+Triangle::Triangle() : Shape(name, type){}
 Triangle::Triangle(double side_a, double side_b, double side_c, std::string name, std::string type) : Shape(name, type)
 {
     this->side_a = side_a;
@@ -150,6 +153,7 @@ std::istream& operator >> (std::istream& in, Triangle &trndl)
 }
 
 ////------Start of class implementation Cube--------
+Cube::Cube() : Shape(name, type){}
 Cube::Cube(double length, std::string name, std::string type) : Shape(name, type)
 {
     this->length = length;
@@ -179,6 +183,7 @@ std::istream& operator >> (std::istream& in, Cube &cube)
 }
 
 ////------Start of class implementation Sphere--------
+Sphere::Sphere() : Shape(name, type){}
 Sphere::Sphere(double radius, std::string name, std::string type) : Shape(name, type)
 {
     this->radius = radius;
